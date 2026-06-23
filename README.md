@@ -1,56 +1,171 @@
-# Sistema de Gestión y Estadísticas de Países 🌍
- 
-Proyecto Integrador desarrollado para la cátedra de **Programación 1** en la **Universidad Tecnológica Nacional (UTN)**. El sistema permite administrar de forma eficiente los datos de diferentes países, manejando registros de población, superficie y continente, utilizando persistencia de datos en archivos locales.
+🌍 Sistema de Gestión y Estadísticas de Países
 
----
+Proyecto Integrador desarrollado para la Universidad Tecnológica Nacional (UTN). Se trata de una aplicación de consola (CLI) que permite administrar de forma eficiente los datos demográficos y geográficos de diferentes países, manejando registros de población, superficie y continente, utilizando persistencia de datos en archivos locales.
 
-## 👥 Integrantes del Equipo
-* **Maximiliano Dacrema**
-* **Lucas Palazzolo**
+👨‍💻 Autor
 
----
+Maximiliano Dacrema
 
-## 📊 Estructura del Proyecto
+---------------------------------------------------------------------------------------------
 
-El proyecto está diseñado bajo un enfoque modular, separando la lógica de las funciones de la interfaz del menú principal:
+🚀 Características Principales
 
-* **`main.py`**: Contiene el bucle principal de la aplicación, maneja la interfaz interactiva de usuario (menú) y gestiona los flujos de control.
-* **`funciones.py`**: Alberga toda la lógica de negocio, manipulación de estructuras de datos y lectura/escritura de archivos.
-* **`datos/paises.csv`**: Archivo de texto plano utilizado como base de datos local para almacenar los registros de forma permanente.
+El sistema integra todas sus funcionalidades en un menú interactivo y amigable para el usuario:
 
----
+🔄 Carga Automática: Lee el archivo CSV al iniciar y carga los datos en memoria. Cuenta con protección ante archivos inexistentes o formatos corruptos.
 
-## 🚀 Características Principales
+📖 Visualización Completa: Muestra el listado de todos los países cargados con sus respectivos habitantes, superficie y ubicación geográfica.
 
-El sistema cuenta con las siguientes funcionalidades integradas en un menú interactivo:
+➕ Altas de Registros: Permite añadir nuevos países con validación estricta (evita campos vacíos y exige formatos numéricos correctos).
 
-1. **Carga Automática**: Al iniciar, el sistema lee el archivo CSV y carga los datos en memoria. Si el archivo no existe o contiene errores de formato, está protegido para no colapsar.
-2. **Visualización Completa**: Muestra el listado de todos los países cargados con sus respectivos datos de habitantes, superficie y ubicación geográfica.
-3. **Altas de Registros**: Permite añadir nuevos países validando que los campos esenciales no se envíen vacíos y que los datos numéricos sean correctos.
-4. **Búsqueda Avanzada**: Localiza países mediante coincidencias parciales en el nombre, en el cazo de haber coincidencia permite si el usuario quiere cambiar los valores de superficie y población (sin distinguir mayúsculas de minúsculas).
-5. **Filtrado Geográfico**: Agrupa y muestra en pantalla únicamente los países pertenecientes a un continente específico.
-6. **Ordenamiento Eficiente**: Ordena el listado de países de menor a mayor según su población utilizando un algoritmo de ordenación propio.
-7. **Estadísticas Generales**: Calcula e informa de manera automática qué país posee mayor y menor cantidad de habitantes, junto con el promedio general de población.
-8. **Persistencia Garantizada**: Guarda los datos de manera manual o automática al seleccionar la opción de salida del programa para asegurar que no se pierda la información.
+🔍 Búsqueda y Actualización: Localiza países mediante coincidencias parciales de nombre (case-insensitive) y permite modificar en caliente los valores de superficie y población.
 
----
+🌍 Filtrado Geográfico: Agrupa y muestra en pantalla únicamente los países pertenecientes a un continente específico.
 
-## 🛠️ Aspectos Técnicos Destacados
+📊 Ordenamiento Eficiente: Ordena el listado de países de menor a mayor según su población utilizando un algoritmo propio.
 
-* **Estructuras de Datos**: Se implementó una **lista de diccionarios** para representar la base de datos en memoria, garantizando que toda la información de un mismo registro se mantenga unificada y ordenada.
-* **Algoritmia Propia**: Para el ordenamiento de los datos se desarrolló manualmente el método de la **Burbuja (Bubble Sort)**, evitando el uso de funciones automáticas de ordenamiento de Python para cumplir con los requerimientos académicos.
-* **Robustez y Control de Errores**: Se incorporaron bloques `try-except` para interceptar excepciones comunes como `FileNotFoundError` (archivo faltante) o `ValueError` (datos numéricos corruptos en el archivo o mal ingresados por el usuario), asegurando la continuidad del programa.
-* **Seguridad de Datos**: En los procesos de ordenamiento se utiliza el método `.copy()` para trabajar sobre una réplica de la lista, evitando alterar el orden original de la base de datos a menos que el usuario lo decida.
+📈 Estadísticas Generales: Calcula e informa automáticamente los países con mayor/menor cantidad de habitantes y los promedios globales.
 
----
+💾 Persistencia Garantizada: Guarda los datos manual o automáticamente al salir, asegurando que no se pierda la información.
 
-## 💻 Requisitos e Instalación
+---------------------------------------------------------------------------------------------
 
-Para ejecutar este proyecto de manera local, solo necesitás tener instalado **Python 3.x**.
+🛠️ Aspectos Técnicos Destacados
 
-1. Cloná o descargá este repositorio en tu computadora.
-2. Asegurate de mantener la estructura de carpetas original (con la carpeta `datos` y el archivo `paises.csv` en su interior).
-3. Ejecutá el archivo principal desde tu terminal o consola de comandos:
+Estructuras de Datos: Se implementó una lista de diccionarios para la base de datos en memoria, garantizando que la información de cada registro se mantenga unificada y estructurada.
 
-```bash
+Algoritmia Propia: Para el ordenamiento se desarrolló manualmente el método de la Burbuja (Bubble Sort), cumpliendo con los requerimientos académicos de no utilizar funciones nativas (.sort()).
+
+Robustez y Control de Errores: Uso intensivo de bloques try-except para interceptar FileNotFoundError (archivos faltantes) o ValueError (datos numéricos corruptos/mal ingresados).
+
+Seguridad de Datos: En los ordenamientos se emplea el método .copy() para operar sobre una réplica de la lista, evitando alterar el estado original de la base de datos a menos que el usuario lo guarde.
+
+Cero Dependencias: Desarrollado 100% con bibliotecas estándar de Python.
+
+---------------------------------------------------------------------------------------------
+
+📂 Estructura del Proyecto
+
+El código fuente está diseñado bajo un enfoque modular, separando la interfaz de la lógica de negocio:
+
+📁 proyecto-paises/
+├── 📄 main.py          # Bucle principal, interfaz de usuario (menú) y control de flujo.
+├── 📄 funciones.py     # Lógica de negocio, CRUD, algoritmos y manejo de archivos.
+├── 📁 img/             # Directorio con imágenes para la documentación.
+└── 📁 datos/
+    └── 📄 paises.csv   # Base de datos local (archivo de texto plano).
+
+---------------------------------------------------------------------------------------------
+
+💻 Instalación y Uso
+
+Para ejecutar este proyecto en tu entorno local, solo necesitas tener instalado Python 3.x.
+
+Clona este repositorio o descarga el código fuente:
+
+git clone [https://github.com/tu-usuario/tu-repositorio.git](https://github.com/tu-usuario/tu-repositorio.git)
+
+
+Navega al directorio del proyecto:
+
+cd tu-repositorio
+
+
+Asegúrate de mantener la carpeta datos y el archivo paises.csv en la misma ruta.
+
+Ejecuta el archivo principal desde tu terminal:
+
 python main.py
+
+---------------------------------------------------------------------------------------------
+
+📸 Ejemplos de Uso
+
+A continuación se detalla el comportamiento del sistema para cada una de las opciones del menú principal. Al iniciar el programa, la consola recibe al usuario con el siguiente menú:
+
+img/menu.png
+
+La elección es: 
+
+
+1️⃣ Mostrar países
+
+Lista todos los registros cargados actualmente en memoria con un formato de fácil lectura.
+
+=== PAÍSES ===
+Argentina - 45808747 hab - 2780400 km² - america
+Brasil - 214326223 hab - 8515767 km² - america
+España - 47426683 hab - 505990 km² - europa
+...
+
+
+2️⃣ Agregar país
+
+Guía al usuario paso a paso para añadir un nuevo registro. Cuenta con validación para evitar que ingreses letras en campos numéricos (como la población).
+
+Nombre: Italia
+Poblacion: 59000000
+Superficie: 301340
+Continente: europa
+País agregado correctamente
+
+
+3️⃣ Buscar y Actualizar país
+
+Permite buscar un país ingresando solo una parte de su nombre. Si lo encuentra, ofrece la opción interactiva de modificar sus datos de población y superficie.
+
+Ingresa el nombre del país que deseas buscar: Argen
+
+Encontrado: Argentina - Población: 45808747 - Superficie: 2780400 - Continente: america
+¿Deseas actualizar los datos de Argentina? (s/n): s
+Nueva población (deja en blanco para mantener la actual): 46000000
+Nueva superficie (deja en blanco para mantener la actual): 
+Datos de Argentina actualizados correctamente.
+
+
+4️⃣ Filtrar por continente
+
+Muestra de forma exclusiva los países que pertenecen al continente tipeado por el usuario.
+
+Ingresa el continente que deseas filtrar: europa
+
+=== RESULTADOS ===
+España - 47426683 - europa
+Italia - 59000000 - europa
+Francia - 67750000 - europa
+
+
+5️⃣ Ordenar por población (Burbuja)
+
+Implementación algorítmica propia que reordena temporalmente el listado mostrando primero los países con menor cantidad de habitantes y por último los más poblados.
+
+=== ORDENADO POR POBLACIÓN ===
+Uruguay - 3426260
+Chile - 19493184
+Argentina - 46000000
+...
+
+
+6️⃣ Estadísticas de población
+
+Ejecuta cálculos en tiempo real sobre la base de datos entera, arrojando métricas de interés geográfico y demográfico.
+
+ESTADÍSTICAS
+País con mayor población: China (1412360000 hab)
+País con menor población: Uruguay (3426260 hab)
+Promedio de población global: 154238541.20 hab
+Promedio de superficie global: 3120500.50 km²
+
+Cantidad de países por continente:
+ - america: 8 países
+ - europa: 15 países
+ - asia: 12 países
+
+
+7️⃣ y 0️⃣ Guardar los cambios / Salir
+
+El sistema permite un guardado manual de seguridad en el archivo paises.csv. Asimismo, si el usuario elige salir con el "0", el sistema guardará todo de forma automática para prevenir cualquier pérdida de datos accidental.
+
+La elección es: 0
+Datos guardados correctamente
+Hasta luego. Gracias por utilizar esta biblioteca de países.
