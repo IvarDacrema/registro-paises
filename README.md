@@ -92,80 +92,48 @@ La elección es:
 
 Lista todos los registros cargados actualmente en memoria con un formato de fácil lectura.
 
-=== PAÍSES ===
-Argentina - 45808747 hab - 2780400 km² - america
-Brasil - 214326223 hab - 8515767 km² - america
-España - 47426683 hab - 505990 km² - europa
-...
-
+![Menú Principal](img/opcion_1.png)
 
 2️⃣ Agregar país
 
 Guía al usuario paso a paso para añadir un nuevo registro. Cuenta con validación para evitar que ingreses letras en campos numéricos (como la población).
 
-Nombre: Italia
-Poblacion: 59000000
-Superficie: 301340
-Continente: europa
-País agregado correctamente
+![Menú Principal](img/opcion_2.png)
 
 
 3️⃣ Buscar y Actualizar país
 
 Permite buscar un país ingresando solo una parte de su nombre. Si lo encuentra, ofrece la opción interactiva de modificar sus datos de población y superficie.
 
-Ingresa el nombre del país que deseas buscar: Argen
-
-Encontrado: Argentina - Población: 45808747 - Superficie: 2780400 - Continente: america
-¿Deseas actualizar los datos de Argentina? (s/n): s
-Nueva población (deja en blanco para mantener la actual): 46000000
-Nueva superficie (deja en blanco para mantener la actual): 
-Datos de Argentina actualizados correctamente.
+![Menú Principal](img/opcion_3.png)
 
 
 4️⃣ Filtrar por continente
 
 Muestra de forma exclusiva los países que pertenecen al continente tipeado por el usuario.
 
-Ingresa el continente que deseas filtrar: europa
-
-=== RESULTADOS ===
-España - 47426683 - europa
-Italia - 59000000 - europa
-Francia - 67750000 - europa
+![Menú Principal](img/opcion_4.png)
 
 
 5️⃣ Ordenar por población (Burbuja)
 
 Implementación algorítmica propia que reordena temporalmente el listado mostrando primero los países con menor cantidad de habitantes y por último los más poblados.
 
-=== ORDENADO POR POBLACIÓN ===
-Uruguay - 3426260
-Chile - 19493184
-Argentina - 46000000
-...
+![Menú Principal](img/opcion_5.png)
 
 
 6️⃣ Estadísticas de población
 
 Ejecuta cálculos en tiempo real sobre la base de datos entera, arrojando métricas de interés geográfico y demográfico.
 
-ESTADÍSTICAS
-País con mayor población: China (1412360000 hab)
-País con menor población: Uruguay (3426260 hab)
-Promedio de población global: 154238541.20 hab
-Promedio de superficie global: 3120500.50 km²
-
-Cantidad de países por continente:
- - america: 8 países
- - europa: 15 países
- - asia: 12 países
+![Menú Principal](img/opcion_6.png)
 
 
 7️⃣ y 0️⃣ Guardar los cambios / Salir
 
 El sistema permite un guardado manual de seguridad en el archivo paises.csv. Asimismo, si el usuario elige salir con el "0", el sistema guardará todo de forma automática para prevenir cualquier pérdida de datos accidental.
 
-La elección es: 0
-Datos guardados correctamente
-Hasta luego. Gracias por utilizar esta biblioteca de países.
+![Menú Principal](img/opcion_7.png)
+
+![Menú Principal](img/opcion_0.png)
+
