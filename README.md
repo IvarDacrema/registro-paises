@@ -4,7 +4,7 @@ Proyecto Integrador desarrollado para la Universidad Tecnológica Nacional (UTN)
 
 👨‍💻 Autor
 
-Maximiliano Dacrema
+Ivar Maximiliano Dacrema Carletto
 
 ---------------------------------------------------------------------------------------------
 
