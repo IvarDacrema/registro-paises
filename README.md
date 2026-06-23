@@ -83,7 +83,7 @@ python main.py
 
 A continuación se detalla el comportamiento del sistema para cada una de las opciones del menú principal. Al iniciar el programa, la consola recibe al usuario con el siguiente menú:
 
-img/menu.png
+![Menú Principal](img/menu.png)
 
 La elección es: 
 
